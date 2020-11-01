@@ -9,4 +9,4 @@ class Neighborhood(models.Model):
     occupants_count = models.IntegerField()   
     Admin = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
-
+    country = CountryField(blank_label='(select country)', default='NG')
