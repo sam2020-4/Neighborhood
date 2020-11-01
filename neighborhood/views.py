@@ -31,4 +31,3 @@ def index(request):
     return render(request, 'index.html', {"date": date, "all_neighborhoods":all_neighborhoods,})
 
 
-
