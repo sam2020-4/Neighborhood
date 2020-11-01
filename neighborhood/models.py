@@ -56,4 +56,9 @@ class Neighborhood(models.Model):
 
 
 # profile class
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(blank=True)
+    photo = CloudinaryField('profile_pics/', blank=True)
+    neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, blank=True, default='1')
 
