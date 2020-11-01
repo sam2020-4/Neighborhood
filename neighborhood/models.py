@@ -3,7 +3,7 @@ import datetime as dt
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 from django_countries.fields import CountryField
-
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 # Neighborhood class
@@ -34,8 +34,7 @@ class Neighborhood(models.Model):
     @classmethod
     def get_by_admin(cls, Admin):
         projects = cls.objects.filter(Admin=Admin)
-        return projects
-    
+        return projects    
     
     @classmethod
     def get_neighborhood(request, neighborhood):
