@@ -1,6 +1,21 @@
 from django import forms
 from .models import *
 
+       
+class RegisterForm(RegistrationForm):
+    username = forms.CharField(max_length=255)
+        
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password1', 'password2',)
+        
+    def __init__(self, *args, **kwargs):
+        super(RegistrationForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+        self.helper.form_show_labels = True 
+
 class NewBusinessForm(forms.ModelForm):
     class Meta:
         model = Business
@@ -21,21 +36,11 @@ class ProfileUpdateForm(forms.ModelForm):
         widgets = {
           'bio': forms.Textarea(attrs={'rows':2, 'cols':10,}),
         }
-
         
-class RegisterForm(RegistrationForm):
-    username = forms.CharField(max_length=255)
-        
+class NewPostForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ('username', 'email', 'password1', 'password2',)
-        
-    def __init__(self, *args, **kwargs):
-        super(RegistrationForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        for fieldname in ['username', 'password1', 'password2']:
-            self.fields[fieldname].help_text = None
-        self.helper.form_show_labels = True 
-        
-
-
+        model = Posts
+        exclude = ['Author', 'pub_date', 'author_profile', 'neighborhood']
+        widgets = {
+          'post': forms.Textarea(attrs={'rows':2, 'cols':10,}),
+        }
