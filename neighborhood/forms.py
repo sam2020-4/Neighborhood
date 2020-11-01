@@ -14,3 +14,14 @@ class NewNeighborhoodForm(forms.ModelForm):
         model = Neighborhood
         exclude = ['Admin', 'pub_date', 'admin_profile']
     
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        exclude = ['user']
+        widgets = {
+          'bio': forms.Textarea(attrs={'rows':2, 'cols':10,}),
+        }
+
+
+
+
