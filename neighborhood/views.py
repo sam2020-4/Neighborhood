@@ -30,4 +30,34 @@ def index(request):
 
     return render(request, 'index.html', {"date": date, "all_neighborhoods":all_neighborhoods,})
 
+# register method
+def register(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}')
+            return redirect('/')
+        
+    else:
+        form = RegisterForm()
+    return render(request, 'registration/registration_form.html', {'form':form})
+    
+# search method for business    
+@login_required(login_url='/accounts/login/')
+def search_businesses(request):
+    if 'keyword' in request.GET and request.GET["keyword"]:
+        search_term = request.GET.get("keyword")
+        searched_projects = Business.search_business(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search.html', {"message":message,"businesses": searched_projects})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'search.html', {"message": message})
+
+
+
 
