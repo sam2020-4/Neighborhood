@@ -117,7 +117,6 @@ def user_profiles(request):
     return render(request, 'registration/profile.html', {"form":form, "form2":form2})
 
 # new post method
-
 @login_required(login_url='/accounts/login/')
 def new_post(request):
     current_user = request.user
