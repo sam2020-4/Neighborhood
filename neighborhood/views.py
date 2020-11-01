@@ -116,5 +116,25 @@ def user_profiles(request):
 
     return render(request, 'registration/profile.html', {"form":form, "form2":form2})
 
+# new post method
 
+@login_required(login_url='/accounts/login/')
+def new_post(request):
+    current_user = request.user
+    profile = request.user.profile
+    neighborhood = request.user.profile.neighborhood
+
+    if request.method == 'POST':
+        form = NewPostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.Author = current_user
+            post.author_profile = profile
+            post.neighborhood = neighborhood
+            post.save()
+        return redirect('index')
+
+    else:
+        form = NewPostForm()
+    return render(request, 'new-post.html', {"form": form})
 
