@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada&family=Pompiere&display=swap');
 
 body{
-    font-family: 'Pompiere', cursive;
+  font-family: 'Andada', serif;
+  font-family: 'Pompiere', cursive;
 }
 
 /* scroll-top button */

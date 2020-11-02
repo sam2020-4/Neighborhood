@@ -34,7 +34,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'neighborhood.apps.NeighborhoodConfig',
+    # 'neighborhood.apps.NeighborhoodConfig',
+    'neighborhood',
     'bootstrap4',
     'cloudinary',
     'tinymce',

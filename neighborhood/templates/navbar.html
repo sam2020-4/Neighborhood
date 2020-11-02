@@ -18,17 +18,19 @@
           <li class="text-white nav-item">
             <a class="nav-link" href="{% url 'index' %}">Home</a>
           </li>
-          
-        </li>
+          <li class="text-white nav-item">
+            <a class="nav-link" href="#">Developers</a>
+          </li>          
+        
         {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{%url 'new-post'%}"> ADD POST </a>
+          <a class="nav-link font-weight-bold" href="{%url 'new-post'%}"> Add Post </a>
         </li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{%url 'new-business'%}">ADD BUSINESS</a>
+          <a class="nav-link font-weight-bold" href="{%url 'new-business'%}">Add Business</a>
         </li> 
-        </ul>
+      </ul>
        
       <!-- Links -->
       
