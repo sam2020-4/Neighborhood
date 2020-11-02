@@ -1,10 +1,12 @@
 beautifulsoup4==4.9.3
 certifi==2020.6.20
 cloudinary==1.22.0
+confusable-homoglyphs==3.2.0
 Django==1.11.29
 django-bootstrap4==1.0.1
 django-countries==5.5
 django-crispy-forms==1.8.0
+django-registration==2.4.1
 django-tinymce==2.8.0
 psycopg2==2.8.3
 pytz==2020.1
