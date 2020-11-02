@@ -6,12 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  <
   {% if title %}
-  <title>Neighborhood - {{title}}</title>
+  <title> Neighborhood - {{title}}</title>
   {% else %}
     <title> Neighborhood </title>
   {% endif %} 
 
-  {% block styles %}    
+  {% block styles %} 
+
   <!-- google-fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
@@ -45,11 +46,20 @@
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-
+      <script type="text/javascript" src="{% static 'scripts.js' %}"></script>
     {% endblock %}
-
+    
     <div class="pt-4 mt-4 mb-4 pb-4"></div>
     <!-- Footer -->
+    <footer class="page-footer font-small color-dark mt-4 pt-4">
+      <div class="footer-copyright text-center py-3 black-text">
+        <a>© 2020 Copyright, Neighborhood project || All Right Reserved.</a>      
+      </div>    
+    </footer> 
+  
+    <button class="btn btn-rose btn-fab btn-fab-mini btn-round position-fixed back-to-top is-hidden">
+      <i class="material-icons">keyboard_arrow_up</i>
+    </button>
 
 </body>
 </html>
