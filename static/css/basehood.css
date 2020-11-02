@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 
-/* scroll-top button */
+body{
+    font-family: 'Pompiere', cursive;
+}
 
+/* scroll-top button */
 .form-row button {
     font-size: 16px;
   }
