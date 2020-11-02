@@ -139,3 +139,9 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+# cloudinary
+cloudinary.config( 
+  cloud_name = config('Cloud_name'), 
+  api_key = config('API_Key'),
+  api_secret = config('API_Secret')
+)
