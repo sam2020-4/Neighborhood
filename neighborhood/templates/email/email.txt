@@ -1,0 +1,3 @@
+Hello {{name}}
+
+Welcome to Neighboorhood App!! a place to be informed what is happening around you.
