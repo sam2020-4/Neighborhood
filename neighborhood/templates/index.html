@@ -40,28 +40,26 @@
           {% if location %}
               <!-- start of table  --> 
             <div class="table-responsive">
-                <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                  <thead class="black white-text">
+                <table id="dtBasicExample" class="table table-striped" cellspacing="0">
+                  <thead class="grey black-text">
                     <tr class="font-weight-bold">
-                      <th class="th-sm">Business Name
-                      </th>
-                      <th class="th-sm">Business Address
-                      </th>
-                      <th class="th-sm">Business Email
-                      </th>
-                      <th class="th-sm">Neighborhood
-                      </th>
-                      
+                      <th class="th-sm">Business Name</th>
+                      <th class="th-sm">Business Address</th>
+                      <th class="th-sm">Business Email</th>
+                      <th class="th-sm">Neighborhood Name</th>
+                      <th class="th-sm">Police Contacts</th>
+                      <th class="th-sm">Health Contacts</th>                      
                     </tr>
                   </thead>
                   <tbody>
-                      {% for biz in location%}
+                      {% for Business in location%}
                     <tr>
-                      <td>{{biz.name}}</td>
-                      <td>{{biz.address}}</td>
-                      <td>{{biz.email}}</td>
-                      <td>{{biz.neighborhood.name}}</td>
-                      
+                      <td>{{Business.name}}</td>
+                      <td>{{Business.address}}</td>
+                      <td>{{Business.email}}</td>
+                      <td>{{Business.neighborhood.name}}</td>
+                      <td>{{Business.police_cont}}</td>
+                      <td>{{Business.health_cont}}</td>                      
                     </tr>
               {% endfor %}                    
                   </tbody>
@@ -110,16 +108,18 @@
                       <!-- Heading -->
                       <h3 class="display-4 font-weight-bold white-text pt-5 animate__animated animate__fadeInLeft">Neighborhood App!!!</h3>
                                            
-                      <a href="/accounts/login"><button type="button" class="btn btn-outline-white">Login<i class="fal fa-sign-in ml-2"></i></button>
+                      <!-- <a href="/accounts/login"><button type="button" class="btn btn-outline-white">Login<i class="fal fa-sign-in ml-2"></i></button>
                       </a>
                       <a href="accounts/register"><button type="button" class="btn btn-outline-white">Sign Up<i class="fal fa-sign-in-alt ml-2"></i><i class="fa fa-book "></i></button>
-                      </a>
+                      </a> -->
                   </div>
               </div>
           </div>
       </div>
   </div>
 </div>
+
+
 {% endif %}
 <!-- end of landing page -->
 

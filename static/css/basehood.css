@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Andada&family=Pompiere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body{
-  font-family: 'Andada', serif;
-  font-family: 'Pompiere', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* scroll-top button */

@@ -89,7 +89,10 @@ class Business(models.Model):
     admin_profile = models.ForeignKey(Profile,on_delete=models.CASCADE, blank=True, default='1')
     address = models.TextField()
     neighborhood = models.ForeignKey(Neighborhood,on_delete=models.CASCADE, blank=True, default='1')
+    police_cont = models.CharField(max_length=255)
+    health_cont = models.CharField(max_length=255)
 
+   
     def save_business(self):
         self.save()
     
