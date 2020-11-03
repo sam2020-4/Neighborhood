@@ -2,7 +2,6 @@ from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
-from django_countries.fields import CountryField
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -12,8 +11,7 @@ class Neighborhood(models.Model):
     location = models.CharField(max_length=255)
     occupants_count = models.IntegerField()   
     Admin = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    pub_date = models.DateTimeField(auto_now_add=True)
-    country = CountryField(blank_label='(select country)', default='NG')
+    pub_date = models.DateTimeField(auto_now_add=True)    
 
     def save_neighborhood(self):
         self.save()

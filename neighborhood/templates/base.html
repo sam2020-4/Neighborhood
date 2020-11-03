@@ -35,12 +35,14 @@
   {% include "navbar.html" %}
 
   {% block content %} 
-  <div class="jumbotron jumbotron-fluid bg- mb-1 pb-3 pt-4">
+  <div class="jumbotron-fluid  pb-2 pt-1">
       <div class="">
         <h2 class="display-5 text-center font-weight-bold text-white text-uppercase animate__animated animate__fadeInLeft">Neighborhood App</h2>
-        <p class="text-center font-weight-bold text-uppercase">SELECT YOUR NEIGHBORHOOD TO GET STARTED</p>
+        <p class="text-center font-weight-bold text-uppercase">WELCOME AGAIN!!</p>
+        <p class="text-center font-weight-italic text-Capitalize"> Status: Already Logged in</p>
       </div>
     </div>
+    <hr class="bg-light">
   
   {%endblock%} 
 
@@ -58,17 +60,17 @@
     <script type="text/javascript" src="{% static 'scripts.js' %}"></script>
   {% endblock %}
 
-  <div class="pt-4 mt-4 mb-4 pb-4"></div>
+  
   <!-- Footer -->
-  <footer class="page-footer font-small color-dark mt-4 pt-4">
+  <footer class="page-footer font-small color-dark mt-4 pt-">
     <div class="footer-copyright text-center py-3 black-text">
       <a>© 2020 Copyright, Neighborhood project || All Right Reserved.</a>      
     </div>    
   </footer> 
 
-  <button class="btn btn-rose btn-fab btn-fab-mini btn-round position-fixed back-to-top is-hidden">
+  <!-- <button class="btn btn-rose btn-fab btn-fab-mini btn-round position-fixed back-to-top is-hidden">
     <i class="material-icons">keyboard_arrow_up</i>
-  </button>
+  </button> -->
 
 </body>
 </html>
