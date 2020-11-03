@@ -118,14 +118,14 @@ WSGI_APPLICATION = 'Nproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'neighborhood',
-        'USER': 'moringa',
-    'PASSWORD':'sam2020',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'neighborhood',
+#         'USER': 'moringa',
+#     'PASSWORD':'sam2020',
+#     }
+# }
 
 
 # Password validation
@@ -178,8 +178,8 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # handling all media files formatt
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/collections/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'collections')
 
 # cloudinary
 cloudinary.config( 
