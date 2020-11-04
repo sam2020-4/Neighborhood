@@ -1,1 +1,1 @@
-web: gunicorn neighborhood.wsgi --log-file -
+web: gunicorn Nproject.wsgi --log-file -
