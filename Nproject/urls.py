@@ -19,6 +19,7 @@ from django.contrib.auth import views
 from registration.backends.simple.views import RegistrationView
 from neighborhood.forms import RegisterForm
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('neighborhood.urls')),

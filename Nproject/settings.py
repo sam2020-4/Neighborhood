@@ -15,6 +15,7 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import dj_database_url
+import django_heroku
 from decouple import config,Csv
 
 
@@ -180,6 +181,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # handling all media files formatt
 MEDIA_URL = '/collections/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'collections')
+
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
 
 # cloudinary
 cloudinary.config( 
